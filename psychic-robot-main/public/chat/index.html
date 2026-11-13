@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lunaar Chat</title>
+  <meta name="theme-color" content="#090810">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="stylesheet" href="/css/theme.css">
+<link rel="stylesheet" href="/chat/style.css">
+</head>
+<body> 
+   <script>try { document.body.setAttribute("theme", localStorage.getItem("theme") || "default"); } catch (_) { document.body.setAttribute("theme", "default"); }</script>
+  <div id="app">
+
+    <!-- Shown if config.js hasn't been filled in yet -->
+    <div id="setup" class="screen" hidden>
+      <div class="card">
+        <h1>Almost there</h1>
+        <p>Open <code>chat/config.js</code> and paste in your Supabase <b>Project URL</b> and <b>anon public key</b>, then reload.</p>
+        <p class="muted">If this screen stays visible, check the Supabase URL and publishable key in <code>config.js</code>.</p>
+      </div>
+    </div>
+
+    <!-- Login / sign up -->
+    <div id="auth" class="screen" hidden>
+      <div class="card">
+        <div class="brand"><span class="moon" aria-hidden="true"></span><span id="brand-name">Lunaar Chat</span></div>
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" data-mode="login" role="tab">Log in</button>
+          <button type="button" class="tab" data-mode="signup" role="tab">Sign up</button>
+        </div>
+        <form id="auth-form" autocomplete="on" novalidate>
+          <label class="field signup-only" hidden>Username
+            <input id="auth-username" type="text" autocomplete="username" maxlength="24" placeholder="moonwalker">
+          </label>
+          <label class="field">Email
+            <input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </label>
+          <label class="field">Password
+            <input id="auth-password" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters" required>
+          </label>
+          <p id="auth-msg" class="msg" role="status" aria-live="polite"></p>
+          <button id="auth-submit" class="btn primary wide" type="submit">Log in</button>
+          <button id="auth-forgot" class="link" type="button">Forgot your password?</button>
+        </form>
+        <div id="oauth" class="oauth" hidden>
+          <div class="divider"><span>or</span></div>
+          <div id="oauth-buttons"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The chat app -->
+    <div id="layout" class="layout" hidden>
+      <nav id="rail" aria-label="Servers"></nav>
+      <aside id="sidebar">
+        <div id="sidebar-head" class="sidebar-head"></div>
+        <div id="sidebar-body" class="sidebar-body"></div>
+        <div id="userbar" class="userbar"></div>
+      </aside>
+      <section id="chat" aria-label="Chat">
+        <header id="chat-head" class="chat-head"></header>
+        <div id="messages" class="messages" role="log" aria-live="polite"></div>
+        <div id="typing" class="typing" aria-live="polite"></div>
+        <form id="composer" class="composer" autocomplete="off">
+          <textarea id="input" rows="1" maxlength="2000" placeholder="Message" aria-label="Message"></textarea>
+          <button class="btn primary send" type="submit" aria-label="Send">Send</button>
+        </form>
+      </section>
+      <aside id="members" class="members" aria-label="Members"></aside>
+      <div id="scrim" class="scrim"></div>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toasts" class="toasts" aria-live="assertive"></div>
+  </div>
+
+  <script src="/chat/config.js"></script>
+  <script src="/chat/supabase.js"></script>
+  <script src="/chat/app.js"></script>
+</body>
+</html>

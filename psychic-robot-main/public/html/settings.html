@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - &#x4c;&#x75;&#x6e;&#x61;&#x61;&#x72;</title>
+    <meta
+      name="title"
+      content="Lunaar Educational Portal - Free Online Learning Resources"
+    />
+    <meta
+      name="description"
+      content="Lunaar Educational Portal - Access academic resources, study materials, and learning tools for students. Explore courses and educational content."
+    />
+    <meta
+      name="keywords"
+      content="educational portal, online learning, study materials, academic resources, free courses, student tools, learning platform, education, study guides"
+    />
+    <meta name="author" content="james" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lunaar.org/" />
+    <meta
+      property="og:title"
+      content="Lunaar Educational Portal - Free Online Learning Resources"
+    />
+    <meta
+      property="og:description"
+      content="Access academic resources, study materials, and learning tools for students. Explore courses and educational content."
+    />
+    <meta property="og:image" content="https://lunaar.org/media/logo.svg" />
+    <meta property="og:site_name" content="Lunaar" />
+    <link
+      rel="icon"
+      href="../media/logo.svg"
+      type="image/x-icon"
+      id="favicon"
+    />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/toastify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/Parcoil/cloak@main/src/index.js"
+      defer
+    ></script>
+    
+    
+
+    
+    
+  </head>
+  <body theme="halloween">
+    <div class="navbar-container"></div>
+    <div id="blobs">
+      <div class="gradiant"></div>
+      <div class="gradiant2"></div>
+      <div class="gradiant3"></div>
+    </div>
+    <div id="particles-js"></div>
+
+    <main>
+      <i
+        class="fa-solid fa-gear"
+        style="font-size: 38px; color: var(--primary-color)"
+      ></i>
+      <h1>Settings</h1>
+      
+      <div class="tabs-container" id="tabs-container">
+        <button class="tab-button btn" id="style-tab" class="btn">
+          <i class="fa fa-paint-brush" aria-hidden="true"></i>
+          Appearance
+        </button>
+        <button class="tab-button btn" id="proxy-tab">
+          <i class="fa fa-network-wired" aria-hidden="true"></i> Proxy
+        </button>
+        <button class="tab-button btn" id="cloak-tab">
+          <i class="fa fa-user-secret" aria-hidden="true"></i> Cloak
+        </button>
+        <button class="tab-button btn" id="other-tab">
+          <i class="fa fa-info-circle" aria-hidden="true"></i> Other
+        </button>
+      </div>
+
+      <div data-tab-name="style" class="tab">
+        <div class="card settings-card">
+          <h1>Theme</h1>
+          <p>Changes &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;s theme</p>
+          <div class="settings-item">
+            <label for="theme-select">Select Theme:</label>
+            <select id="theme-select" class="input">
+              <!-- <option value="halloween">Halloween (Limited)</option> -->
+              <option value="default">V7 Dark</option>
+              <option value="light">V7 Light</option>
+              <option value="v6">V6</option>
+              <option value="greypurple">Grey Purple</option>
+              <option value="audi">Audi</option>
+              <option value="new">Cool Purple</option>
+              <option value="pink">Pink</option>
+              <option value="grey">Grey</option>
+              <option value="ssb">Surf Shark Blue</option>
+              <option value="greyblack">Grey Black</option>
+              <option value="ghost">Black &amp; Red</option>
+              <option value="blue">Blue</option>
+              <option value="bone">Bonelab</option>
+              <option value="gb">Greyish Blue</option>
+              <option value="gg">Greyish Green</option>
+              <option value="brown">Brown</option>
+              <option value="dg">Dark Orange</option>
+              <option value="moon">Moon</option>
+              <option value="red">Red</option>
+              <option value="sblue">Sahara Blue</option>
+              <option value="mocha">Mocha</option>
+              <option value="orange">Orange</option>
+              <option value="youtube-dark">YouTube Dark</option>
+              <option value="3kh0">3kh0</option>
+              <option value="artclass">Art Class</option>
+              <option value="starlight">Starlight</option>
+            </select>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Background Image</h1>
+          <p>Changes &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;s Background</p>
+          <div class="settings-item">
+            <select id="background-select">
+              <option value="default" selected="">None</option>
+              <option value="audi">Audi</option>
+              <option value="windows">Windows</option>
+              <option value="macosdark">MacOS Dark</option>
+              <option value="windowsdark">Windows Dark</option>
+              <option value="custom" hidden="">Custom Link</option>
+            </select>
+            <input
+              class="input settings-input"
+              id="background-input"
+              type="text"
+              placeholder="Image URL"
+            />
+            <button class="btn" id="reset-image-button">Reset</button>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Blobs</h1>
+          <p>
+            Enables or disables blobs on &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;
+          </p>
+          <div class="settings-item toggle-card">
+            <label class="switch">
+              <input type="checkbox" id="disableBlobs" class="input" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Particles</h1>
+          <p>
+            Enables or disables particles on
+            &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;
+          </p>
+          <div class="settings-item toggle-card">
+            <label class="switch">
+              <input type="checkbox" id="disableParticles" class="input" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Disable Tips</h1>
+          <p>Disables tips on &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;</p>
+          <div class="settings-item toggle-card">
+            <label for="disableTips">Disable Tips:</label>
+            <div style="display: flex; align-items: center">
+              <label class="switch">
+                <input type="checkbox" id="disableTips" class="input" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab" data-tab-name="proxy" style="display: none">
+        <div class="card settings-card">
+          <h1>Transport</h1>
+          <p>
+            Changes the proxy transport on &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;
+          </p>
+          <div class="settings-item">
+            <label for="proxy-transport">Select Transport:</label>
+            <select id="proxy-transport" class="input">
+              <option value="libcurl">Libcurl (needs a WebSocket host)</option>
+              <option value="epoxy">Epoxy (needs a WebSocket host)</option>
+              <option value="bare">Bare Server (Default, works on Vercel)</option>
+            </select>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Search Engine</h1>
+          <p>
+            Changes the proxy search engine on
+            &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;
+          </p>
+          <div class="settings-item">
+            <label for="search-engine-select">Select Search Engine:</label>
+            <select id="search-engine-select" class="input">
+              <option value="google">Google (Default)</option>
+              <option value="ddg">DuckDuckGo</option>
+              <option value="brave">Brave</option>
+              <option value="bing">Bing (Who uses this?)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="tab" data-tab-name="cloak" style="display: none">
+        <div class="card settings-card">
+          <h1>Cloak</h1>
+          <p>Changes the title and site icon</p>
+          <select data-cloak-select class="input settings-input">
+            <option selected="" hidden="">Select a cloak</option>
+            <option value="canvas">Canvas</option>
+            <option value="wikipedia">Wikipedia</option>
+            <option value="edpuzzle">Edpuzzle</option>
+            <option value="drive">Google Drive</option>
+            <option value="classroom">Google Classroom</option>
+            <option value="zoom">Zoom</option>
+            <option value="khan">Khan Academy</option>
+            <option value="desmos">Desmos</option>
+            <option value="gforms">Google Forms</option>
+            <option value="quizlet">Quizlet</option>
+            <option value="blob">Blob</option>
+          </select>
+          <button id="cloak-reset" class="btn">Reset</button>
+          <p href="">
+            Powered by
+            Cloakjs
+          </p>
+        </div>
+        <div class="card settings-card">
+          <h1>About Cloak</h1>
+          <p>Hides your &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72; tab</p>
+          <p>(replaces this tab with wikipedia)</p>
+          <div class="settings-item">
+            <button
+              class="btn"
+              onclick="cloak.aboutBlank('https://wikipedia.org')"
+            >
+              Launch
+            </button>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Blob Cloak</h1>
+          <p>Hides your &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72; tab using blob</p>
+          <p>(replaces this tab with wikipedia)</p>
+          <div class="settings-item">
+            <button class="btn" onclick="cloak.blob('https://wikipedia.org')">
+              Launch
+            </button>
+          </div>
+        </div>
+        <div class="card settings-card">
+          <h1>Panic Key</h1>
+          <p>When this key is pressed it takes you to the defined site</p>
+          <div class="settings-item">
+            <input
+              class="input settings-input"
+              id="panicUrl"
+              type="text"
+              placeholder="URL"
+            />
+            <input
+              class="input settings-input"
+              id="panicKey"
+              type="text"
+              placeholder="KEY"
+            />
+          </div>
+          <p>tip: to use <code>~</code> press shift + `</p>
+        </div>
+      </div>
+      <div class="tab" data-tab-name="other" style="display: none">
+        <div class="card settings-card">
+          <i class="fa-solid fa-cloud-arrow-down" style="font-size: 2rem"></i>
+          <h2>Import/Export Data</h2>
+          <p>
+            Import/Export your &#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72; save data
+          </p>
+          <button class="btn" onclick="uploadBrowserBackup()">
+            Import <i class="fa-solid fa-file-import"></i>
+          </button>
+          <button class="btn" onclick="downloadBrowserBackup()">
+            Export <i class="fa-solid fa-download"></i>
+          </button>
+        </div>
+        <div class="card settings-card">
+          <i class="fa-solid fa-book" style="font-size: 2rem"></i>
+          <h2>&#x4c;&#x75;&#x6e;&#x61;&#x61;&#x72; Docs</h2>
+          <a
+            href="&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x64;&#x6f;&#x63;&#x73;&#x2e;&#x6c;&#x75;&#x6e;&#x61;&#x61;&#x72;&#x2e;&#x6f;&#x72;&#x67;"
+            target="_blank"
+            class="btn"
+            >Open Docs <i class="fa-solid fa-up-right-from-square"></i
+          ></a>
+        </div>
+        <div class="card settings-card">
+          <i class="fa-solid fa-rotate" style="font-size: 2rem"></i>
+          <h2>Reset Settings</h2>
+          <button class="btn" id="reset-settings">Reset All Settings</button>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="../js/toastify-js.js"></script>
+    <script src="../js/sweetalert2.js"></script>
+    <script src="../js/settings.js" defer></script>
+    <style>
+      .toggle-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px !important;
+      }
+      @keyframes slideDown {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      #tabs-container {
+        animation: slideFadeIn 0.5s ease-out;
+      }
+
+      /* Settings Cards Slide Up */
+      @keyframes slideUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .settings-card {
+        animation: slideUp 0.3s ease;
+        opacity: 1;
+      }
+
+      .settings-item {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .settings-item label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      .settings-item select {
+        padding: 0.75rem 1rem;
+        border: 2px solid var(--border-color);
+        border-radius: var(--border-radius);
+        background: var(--bg-2-color);
+        color: var(--text-color);
+        font-family: inherit;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        min-width: 200px;
+      }
+
+      .settings-item select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(146, 130, 251, 0.1);
+      }
+
+      .settings-item select:hover {
+        border-color: var(--accent-color);
+      }
+
+      /* Tab Button Styling */
+      .tab-button {
+        margin: 0.25rem;
+        transition: all 0.2s ease;
+      }
+
+      .tab-button.active {
+        background: var(--accent-color) !important;
+        color: var(--text-color) !important;
+        transform: scale(1.05);
+      }
+
+      .tab-button:hover {
+        transform: scale(1.02);
+      }
+
+      /* Card Styling */
+      .card {
+        background: var(--bg-2-color);
+        border: 2px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        margin: 1rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .settings-item select {
+          min-width: 100%;
+        }
+
+        .card {
+          padding: 1rem;
+        }
+      }
+      .tab {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      .settings-input {
+        /* height: 1rem; */
+        margin-top: 0.5rem;
+        font-family: inherit;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        background: var(--bg-2-color);
+      }
+    </style>
+    <div class="footer">
+      <span class="link" style="cursor: default">by james :)</span>
+    </div>
+    <script src="../js/nav.js"></script>
+    <script src="../js/cloak.js"></script>
+    <script src="../js/main.js"></script>
+    
+    
+    
+    
+    <script src="/baremux/index.js" defer></script>
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+    <script src="/uv/register-sw.js" defer></script>
+    <script src="/uv/search.js" defer></script>
+    <script src="/uv/proxy.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+      defer
+    ></script>
+    <div class="panic-btn-div" id="panicDiv">
+      <button id="panicBtn">Panic</button>
+    </div>
+    
+  </body>
+</html>

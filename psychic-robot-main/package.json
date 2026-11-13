@@ -1,0 +1,33 @@
+{
+  "name": "lunaar-james",
+  "version": "7.6.1",
+  "description": "Unblocked games and Ultraviolet proxy - by james :)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "node scripts/copy-assets.js",
+    "format": "prettier --write ."
+  },
+  "author": "james",
+  "license": "ISC",
+  "dependencies": {
+    "@mercuryworkshop/bare-as-module3": "^2.2.2",
+    "@mercuryworkshop/bare-mux": "^2.1.7",
+    "@mercuryworkshop/epoxy-transport": "^2.1.5",
+    "@mercuryworkshop/libcurl-transport": "^1.3.7",
+    "@mercuryworkshop/wisp-js": "^0.4.0",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
+    "@tomphttp/bare-server-node": "^2.0.5",
+    "compression": "^1.7.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "http-proxy": "^1.18.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prettier": "^3.6.2"
+  }
+}

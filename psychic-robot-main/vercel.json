@@ -1,0 +1,54 @@
+{
+  "framework": null,
+  "installCommand": "npm install --no-audit --no-fund",
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60,
+      "includeFiles": "{public/html/**,public/chat/**,node_modules/@mercuryworkshop/**,node_modules/@titaniumnetwork-dev/ultraviolet/**}"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/html/index.html"
+    },
+    {
+      "source": "/science",
+      "destination": "/html/games.html"
+    },
+    {
+      "source": "/math",
+      "destination": "/html/apps.html"
+    },
+    {
+      "source": "/ai",
+      "destination": "/html/ai.html"
+    },
+    {
+      "source": "/settings",
+      "destination": "/html/settings.html"
+    },
+    {
+      "source": "/go",
+      "destination": "/html/go.html"
+    },
+    {
+      "source": "/new",
+      "destination": "/html/new.html"
+    },
+    {
+      "source": "/more",
+      "destination": "/html/more.html"
+    },
+    {
+      "source": "/chat",
+      "destination": "/chat/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
+}
